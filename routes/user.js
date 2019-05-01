@@ -27,10 +27,11 @@ router.get('/list/:pageNumber', (req, res) => {
                 .find({}, {
                     limit: 10,
                     skip: 10 * (Number(pageNumber) - 1),
-                    projection: {
+                    projection: { //ต้องการให้รับข้อมูล
                         _id: 0,
-                        first_name: 1,
-                        last_name: 1
+                        first_name: 1, // 1 แสดง 0 ไม่แสดง
+                        last_name: 1,
+                        username: 1
                     }
                 })
                 .sort({
