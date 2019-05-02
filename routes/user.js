@@ -25,12 +25,7 @@ router.get('/list/:pageNumber', (req, res) => {
             projection: {
                 _id: 1,
                 rank: 1,
-                first_name: 1,
-                last_name: 1,
-                id_mil: 1,
-                unit_name: 1,
-                username: 1,
-                password: 0
+                first_name: 1
             }
         }).sort({
             _id: -1
